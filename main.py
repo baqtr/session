@@ -401,7 +401,7 @@ async def start_msg(app, message):
 
 ‼️ ملاحظـة:
 احـذر مشاركـة الكود لأحـد لأنه يستطيـع اختراق حسـابك ⚠️
-'''.format(message.from_user.mention)) reply_markup=reply_markup, quote=True)
+'''.format(message.from_user.mention), reply_markup=reply_markup, quote=True)
 
 @app.on_message(filters.text & filters.private)
 async def generator_and_about(app,m):
