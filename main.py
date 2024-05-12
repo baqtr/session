@@ -411,6 +411,8 @@ async def generator_and_about(app, m):
         text += f"🔥 اصـدار بايروجـرام: {v}\n"
         text += f"🌱 اصـدار تـيـلـيـثـون: {v2}\n\n"
         text += "👤 المطور  موهان @XX44G"
+    else:
+        text = "لا يتوفر نص للرد"
 
     await m.reply(text, quote=True)
 
