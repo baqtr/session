@@ -385,9 +385,9 @@ async def start_msg(app, message):
       reply_markup = ReplyKeyboardMarkup(
         [
           [
-            KeyboardButton ("بـايـروجـرام"), KeyboardButton ("تـيـلـيـثـون")
+            KeyboardButton ("2️⃣بـايـروجـرام"), KeyboardButton ("1️⃣تـيـلـيـثـون")
           ],
-          [KeyboardButton ("مـعـلـومـات عـن الـبـوت")]
+          [KeyboardButton ("لمحه عن البوت ✅")]
         ],
         resize_keyboard=True, placeholder='استخراج جلسات'
       )
@@ -413,7 +413,7 @@ async def generator_and_about(app,m):
       text += f"\n\n👤 مـطـور الـبـوت: @mmaahg"
       await m.reply(text, quote=True)
 
-    if m.text == "بـايـروجـرام":
+    if m.text == "2️⃣بـايـروجـرام":
         rep = await m.reply(
         "**⏳ يـعالـج..**", reply_markup=ReplyKeyboardRemove ()
         ,quote=True)
@@ -460,7 +460,7 @@ async def generator_and_about(app,m):
         text += f'👤 الاسم الأول : {get.first_name}\n'
         text += f'🆔 بطاقة تعريف : {get.id}\n'
         text += f'📞 رقم الهاتف : {phone}\n'
-        text += f'🔒 تم حفظ الجلسة في الرسائل المحفوظة'
+        text += f'🔒 تم حفظ الجلسه في الرسال المحفوظه لديك تذكر عدم مشاركة الحلس مع احد نصب بنفسك'
         string_session = await c.export_session_string()
         await rep.delete()
         await c.send_message('me', f'تم استخراج جلسة بايروجرام {v2} هذه الجلسة\n\n`{string_session}`')
@@ -472,7 +472,7 @@ async def generator_and_about(app,m):
 
 
 
-    if m.text == "تـيـلـيـثـون":
+    if m.text == "1️⃣تـيـلـيـثـون":
         rep = await m.reply(
           "**⏳ يـعـالـج..**",
           reply_markup=ReplyKeyboardRemove ()
