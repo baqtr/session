@@ -404,15 +404,15 @@ async def start_msg(app, message):
 '''.format(message.from_user.mention), reply_markup=reply_markup, quote=True)
 
 @app.on_message(filters.text & filters.private)
-async def generator_and_about(app,m):
+async def generator_and_about(app, m):
     if m.text == "يرجاء ملاحضة ان لايحق للمطور الاطلاع على جلستك او رقمك  ✅":
-      text = ''
-     text = "🐍 اللـغـة الـبـرمـجـيـة - بـايـثـون\n"
-text += f"🔥 اصـدار بايروجـرام: {v}\n"
-text += f"🌱 اصـدار تـيـلـيـثـون: {v2}\n\n"
-text += "👤 المطور  موهان @XX44G"
+        text = ''
+        text += "🐍 اللـغـة الـبـرمـجـيـة - بـايـثـون\n"
+        text += f"🔥 اصـدار بايروجـرام: {v}\n"
+        text += f"🌱 اصـدار تـيـلـيـثـون: {v2}\n\n"
+        text += "👤 المطور  موهان @XX44G"
 
-await m.reply(text, quote=True)
+    await m.reply(text, quote=True)
 
     if m.text == "بـايـروجـرام":
         rep = await m.reply(
